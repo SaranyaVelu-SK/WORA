@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 // import conversion.Explicit;
 // import conversion.Implicit;
 
@@ -28,5 +31,13 @@ public class Main {
         /* CALL STACK  */
         Callstack.A();
         Callstack.D();
+
+        Scanner scan = new Scanner(System.in);
+        int inputSize = scan.nextInt();
+        int[] arr = new int[inputSize];
+                for(int i=0;i<arr.length;i++){
+                    arr[i]=scan.nextInt();
+            System.out.println(arr[i]);
+        }
     }
 }
