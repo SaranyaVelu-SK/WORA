@@ -39,7 +39,7 @@ public class Main {
                     arr[i]=scan.nextInt();
             System.out.println(arr[i]);
         }
-        
+
         /* 2D ARRAYS */
         int arr1[][] = {{1,2},{2,3,4},{5,6,7,8}};
 
@@ -63,5 +63,19 @@ public class Main {
             }
             System.out.println();
         }
+
+       
+        int[][][] num = new int[3][][];
+        int i, j;
+        num[0] = new int[4][];
+        num[1] = new int[2][];
+        num[2] = new int[5][];
+        for (i = 0; i < num.length; i++) {
+            for (j = 0; j < num[i].length; j++) {
+                num[i][j] = new int[i + j + 1];
+                System.out.println("size = " + num[i][j].length);
+            }
+        }
+    
     }
 }
