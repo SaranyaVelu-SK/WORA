@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-// import conversion.Explicit;
+
 // import conversion.Implicit;
 class Illustration {
 
@@ -28,7 +28,17 @@ class Illustration {
     }
 }
 
-
+class Parent{
+    Parent(){
+        System.out.println("This is parent class");
+    }
+}
+class Child extends Parent{
+    int a =5;
+    Child(){
+        System.out.println("a : "+a);
+    }
+}
 class A{
     B classVar;
 
@@ -46,6 +56,25 @@ class B{
         A obj = new A(this);
         obj.valFromB();
      }
+}
+
+class Tree{
+    Tree(){
+        System.out.println("This is parent tree - no args");
+    }
+    Tree(String s){
+        System.out.println("This is parent Tree - with string arg  " + s);
+    }
+}
+class Fruit extends Tree{
+    Fruit(){
+        this("Apple");
+        System.out.println("This is constructor chaining with super");
+    }
+    Fruit(String s){
+        super(s);
+        System.out.println("This is Apple Tree");
+    }
 }
 public class Main {
 
@@ -112,6 +141,12 @@ public class Main {
 
         Illustration ill = new Illustration();
         B bToA =  new B();
-        
+         Child spr = new Child();
+
+        Fruit app = new Fruit();
+
+        Encapsule emp = new Encapsule();
+        emp.setName("saran");
+        System.out.println(emp.getName());
     }
 }
