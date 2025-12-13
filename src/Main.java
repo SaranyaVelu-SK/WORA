@@ -1,5 +1,5 @@
 
-// import java.util.Scanner;
+import java.util.Scanner;
 
 
 // import conversion.Implicit;
@@ -195,14 +195,26 @@ public class Main {
 
 
         /* POLYMORPHISM */
-        Animal a = new Dog();
-        System.out.println(a.name);
-        a.sound();
+        // Animal a = new Dog();
+        // System.out.println(a.name);
+        // a.sound();
         
-        Main pd = new Main();
-        pd.paymentDetails(new UPI());
+        // Main pd = new Main();
+        // pd.paymentDetails(new UPI());
 
 
+        /* exception handling*/
+        Scanner sc = new Scanner(System.in);
+        Except ex =  new Except();
+        int input = sc.nextInt();
+        ex.getIndex(input);
 
+        ex.deposit(100);
+        ex.deposit(500);
+        try{
+            ex.withdraw(20000);
+        }catch(InsufficientBalanceException e){
+            System.out.println(e);
+        }
     }
 }
